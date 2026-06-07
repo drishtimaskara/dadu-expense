@@ -32,6 +32,14 @@ A full-stack expense tracking application that helps users manage expenses, moni
 * Interactive Pie Charts
 * Spending Insights
 
+### Speech to Text
+
+* understands english
+* no rigidity in english statements
+* Interactive start speaking button
+* button to fill form
+
+
 ### OCR Bill Scanner
 
 * Upload Bill Images
