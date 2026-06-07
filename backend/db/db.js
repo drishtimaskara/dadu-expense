@@ -1,16 +1,20 @@
 import pg from "pg";
+import dotenv from "dotenv";
 
-const pool = new pg.Pool({
-  user: "postgres",
-  password: "DrishtiBitsH@23",
-  host: "localhost",
-  port: 5432,
-  database: "expense_tracker",
+dotenv.config();
+
+const { Pool } = pg;
+
+const pool = new Pool({
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  database: process.env.DB_NAME,
 });
 
 pool.connect()
-  .then(() => console.log("Connected Successfully"))
-  .catch(err => console.log(err));
-  
+  .then(() => console.log("DB connected successfully"))
+  .catch(err => console.log("DB connection error:", err));
 
 export default pool;
