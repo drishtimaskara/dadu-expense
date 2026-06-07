@@ -20,22 +20,6 @@ const [otp, setOtp] = useState("");
     });
   };
 
- /*const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      await API.post("auth/register", formData);
-
-      alert("Registration Successful");
-
-      navigate("/");
-    } catch (error) {
-       console.log("FULL ERROR:", error);
-  console.log("RESPONSE DATA:", error.response?.data);
-  alert(error.response?.data?.message || error.message);
-    }
-  };*/
-
   const sendOtp = async () => {
   try {
     await API.post("/auth/send-otp", {
@@ -70,53 +54,6 @@ const verifyAndRegister = async () => {
     alert("Invalid OTP or registration failed");
   }
 };
-
- /* return (
-    <div className="min-h-screen flex justify-center items-center">
-     <form
-        onSubmit={handleSubmit}
-        className="w-96 p-6 shadow-lg rounded-lg"
-      >
-        <h1 className="text-3xl font-bold mb-4">
-          Register
-        </h1>
-
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          value={formData.name}
-          onChange={handleChange}
-          className="border p-2 w-full mb-3"
-        />
-
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={formData.email}
-          onChange={handleChange}
-          className="border p-2 w-full mb-3"
-        />
-
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={formData.password}
-          onChange={handleChange}
-          className="border p-2 w-full mb-3"
-        />
-
-        <button
-          type="submit"
-          className="bg-blue-500 text-white p-2 w-full"
-        >
-          Register
-        </button>
-      </form>
-    </div>
-  );*/
 
   return (
     <div className="min-h-screen flex justify-center items-center">
