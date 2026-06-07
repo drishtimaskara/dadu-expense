@@ -12,7 +12,7 @@ const pool = new Pool({
   }
 });
   
-});
+
 
 pool.connect()
   .then(() => console.log("DB connected successfully"))
